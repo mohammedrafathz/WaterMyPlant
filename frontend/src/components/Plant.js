@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {useDispatch} from 'react-redux';
 import {startWatering, stopWatering} from '../actions/plantActions';
+import {Spinner} from 'reactstrap';
 
 const Plant = ({image, plantName, status, time, id}) => {
     const dispatch = useDispatch();
@@ -37,6 +38,13 @@ const Plant = ({image, plantName, status, time, id}) => {
                     {disableButton && <p className="card-text">Wait for 30 seconds to water again.</p>}
                     <button className="btn btn-primary me-3" disabled={disableButton} onClick={handleWatering}>Water Me</button>
                     {status && <button className="btn btn-danger" onClick={handleStopWatering}>Stop Watering</button>}
+                    {status && <Spinner
+                        color="dark"
+                        type="grow"
+                        style={{float: 'right'}}
+                    >
+                        Loading...
+                    </Spinner>}
                 </div>
             </div>
         </div>
