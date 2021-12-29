@@ -52,3 +52,8 @@ Frontend
 ## About the Project
 
 Project contains .NET based backend API server and React Redux based frontend. A simple app to allow users to water their plants remotely.
+
+## Project in Action
+
+<!-- [![Watch the video](./assets/ss.png)](./assets/video.mov) -->
+<video src='./assets/video.mov' width=600/>
