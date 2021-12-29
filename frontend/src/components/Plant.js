@@ -28,7 +28,11 @@ const Plant = ({image, plantName, status, time, id}) => {
             <div className="card text-white bg-success mb-3">
                 <img src={image} className="card-img-top" style={{height: "300px"}} alt={plantName} />
                 <div className="card-body">
-                    <h5 className="card-title">{plantName}</h5>
+                    <h5 className="card-title">{plantName}
+                        {status ?
+                            <small className='badge bg-primary rounded-pill' style={{float: 'right'}}>Watering</small> :
+                            <small className='badge bg-info rounded-pill' style={{float: 'right'}}>Idle</small>}
+                    </h5>
                     <p className="card-text"><small className="text-primary">Last watered at: {" "}{new Date(time).toLocaleTimeString()}</small></p>
                     {disableButton && <p className="card-text">Wait for 30 seconds to water again.</p>}
                     <button className="btn btn-primary me-3" disabled={disableButton} onClick={handleWatering}>Water Me</button>
