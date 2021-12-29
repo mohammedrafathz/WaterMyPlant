@@ -55,5 +55,5 @@ Project contains .NET based backend API server and React Redux based frontend. A
 
 ## Project in Action
 
-Video file is available under assets directory
+Click to download video file
 [![Watch the video](./assets/ss.png)](./assets/video.mov)
