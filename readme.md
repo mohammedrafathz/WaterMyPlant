@@ -55,5 +55,5 @@ Project contains .NET based backend API server and React Redux based frontend. A
 
 ## Project in Action
 
-<!-- [![Watch the video](./assets/ss.png)](./assets/video.mov) -->
-<video src='./assets/video.mov' width=600/>
+Video file is available under assets directory
+[![Watch the video](./assets/ss.png)](./assets/video.mov)
