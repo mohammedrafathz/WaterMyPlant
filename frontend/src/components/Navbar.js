@@ -2,9 +2,11 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <h1 className='text-center my-5'>
+                🌱🚿 Water My Plants 🌱🚿
+            </h1>
+        </>
     )
 }
 

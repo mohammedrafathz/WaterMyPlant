@@ -28,13 +28,22 @@ namespace backend.Controllers
             return await _context.Plants.ToListAsync();
         }
 
-        //@route   GET /api/plants/{id}
+        //@route   PUT /api/plants/{id}
         //@desc    get plant by id
         //@access  Public
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Plant>> GetPlantById(int id)
+        [HttpPut("{id}")]
+        public async Task<ActionResult<IEnumerable<Plant>>> GetPlantById(int id, Plant plant)
         {
-            return await _context.Plants.FindAsync(id);
+            var plt = await _context.Plants.FindAsync(id);
+            plt.status = plant.status;
+            if (plant.lastWateredAt != null)
+            {
+                plt.lastWateredAt = plant.lastWateredAt;
+            }
+
+            _context.Plants.Update(plt);
+            await _context.SaveChangesAsync();
+            return await _context.Plants.ToListAsync();
         }
     }
 }

@@ -10,6 +10,7 @@ namespace backend.Models
         public int Id { get; set; }
         public bool status { get; set; }
         public string plantName { get; set; }
-        public DateTime lastWateredAt { get; set; }
+        public string image { get; set; }
+        public string lastWateredAt { get; set; }
     }
 }
